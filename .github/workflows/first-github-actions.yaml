@@ -2,7 +2,7 @@ name: my github workflow
 on:
   push:
     branches:
-      -main
+      - main
 env:
   project_name ="testtextgen"
 jobs:
@@ -14,3 +14,4 @@ jobs:
         uses: actions/checkout@v4
       - run: printenv
       - run: echo "this is the env ${{env.project_name}}"
+
