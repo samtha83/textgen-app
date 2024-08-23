@@ -1,0 +1,7 @@
+openai
+fastapi
+uvicorn[standard]
+torch
+transformers
+pandas
+pydantic
