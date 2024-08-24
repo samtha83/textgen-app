@@ -3,7 +3,7 @@ kind: Deployment
 metadata:
   name: mydeploy
 spec:
-  replicas: 1
+  replicas: 0
   selector:
     matchLabels:
       app: mypod
@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mytextgenapp
-        image: samthareddy/custom-nginx
+        image: gcr.io/PROJECT_ID/IMAGE:TAG  #samthareddy/custom-nginx
         resources:
           limits:
             memory: "128Mi"

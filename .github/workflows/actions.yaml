@@ -10,7 +10,7 @@ env:
   GKE_CLUSTER: my-cluster  # Add your cluster name here.
   GKE_ZONE: us-east1-b  # Add your cluster zone here.
   DEPLOYMENT_NAME: mydeploy # Add your deployment name here.
-  IMAGE: samthareddy/custom-nginx # Image Name
+  IMAGE: textgen # Image Name create the image in kube cluster with this name
 
 jobs:
   setup-build-publish-deploy:
@@ -40,7 +40,7 @@ jobs:
         location: ${{ env.GKE_ZONE }}
         credentials: ${{ secrets.GKE_SA_KEY }}
 
-    # Build the Docker image
+    # Build the Docker image here kustomize file ensures this deploy file is first update dynamically by updating the tag to image and appending the latest commit as the version before deploying it
     - name: Build
       run: |-
         docker build \
