@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: mytextgenapp
-        image: gcr.io/PROJECT_ID/IMAGE:TAG  #samthareddy/custom-nginx
+        image: gcr.io/PROJECT_ID/IMAGE:TAG
         resources:
           limits:
             memory: "128Mi"
