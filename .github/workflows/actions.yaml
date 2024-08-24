@@ -60,7 +60,7 @@ jobs:
         curl -sfLo kustomize https://github.com/kubernetes-sigs/kustomize/releases/download/v3.1.0/kustomize_3.1.0_linux_amd64
         chmod u+x ./kustomize
 
-        HEre true is appended as once secret uploaded to kuber cluster, it will say it exists so just need pass the step by  "OR True"
+    #  HEre true is appended as once secret uploaded to kuber cluster, it will say it exists so just need pass the step by  "OR True"
     # kubectl create secret generic openai-secret --from-literal=API_KEY=${{secrets.OPENAI_API}} || true
 
     # Deploy the Docker image to the GKE cluster
